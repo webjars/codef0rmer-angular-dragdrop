@@ -10,17 +10,27 @@
     
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>angularjs-drag-drop</artifactId>
+    <artifactId>codef0rmer-angular-dragdrop</artifactId>
     <version>1.0.11-SNAPSHOT</version>
-    <name>angularjs-drag-drop</name>
-    <description>WebJar for angularjs-drag-drop</description>
+    <name>angular-dragdrop (codef0rmer)</name>
+    <description>WebJar for angular-dragdrop (codef0rmer)</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>1.0.11</upstream.version>
-        <upstream.url>https://github.com/codef0rmer/angular-dragdrop</upstream.url>
+        <upstream.url>https://raw.githubusercontent.com/codef0rmer/angular-dragdrop/v${upstream.version}/src</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
+        <requirejs>
+            {
+                "paths": {
+                    "angular-dragdrop": "angular-dragdrop"
+                },
+                "shim": {
+                    "angular-dragdrop": ["angular"]
+                }
+            }
+        </requirejs>
     </properties>
 
     <developers>
@@ -40,9 +50,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/webjars/angularjs-drag-drop</url>
-        <connection>scm:git:https://github.com/webjars/angularjs-drag-drop.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/angularjs-drag-drop.git</developerConnection>
+        <url>https://github.com/webjars/codef0rmer-angular-dragdrop</url>
+        <connection>scm:git:https://github.com/webjars/codef0rmer-angular-dragdrop.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/codef0rmer-angular-dragdrop.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
@@ -66,8 +76,9 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                               <mkdir dir="${destDir}" />
-								<get src="https://raw.githubusercontent.com/codef0rmer/angular-dragdrop/master/src/angular-dragdrop.js" dest="${destDir}" />
+                                <mkdir dir="${destDir}" />
+                                <get src="${upstream.url}/angular-dragdrop.js" dest="${destDir}" />
+                                <get src="${upstream.url}/angular-dragdrop.min.js" dest="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
