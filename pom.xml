@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>codef0rmer-angular-dragdrop</artifactId>
-    <version>1.0.11-SNAPSHOT</version>
+    <version>1.0.11</version>
     <name>angular-dragdrop (codef0rmer)</name>
     <description>WebJar for angular-dragdrop (codef0rmer)</description>
     <url>http://webjars.org</url>
@@ -53,7 +53,7 @@
         <url>https://github.com/webjars/codef0rmer-angular-dragdrop</url>
         <connection>scm:git:https://github.com/webjars/codef0rmer-angular-dragdrop.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/codef0rmer-angular-dragdrop.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>codef0rmer-angular-dragdrop-1.0.11</tag>
     </scm>
     
     <dependencies>
